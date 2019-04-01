@@ -1,7 +1,7 @@
 skconfig
 ========
 
-Scikit-learn sampling and validation library.
+Scikit-learn sampling, openCV, Face Recognition and validation library.
 
 Features
 --------
