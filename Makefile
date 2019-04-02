@@ -5,6 +5,7 @@ lint:
 
 dev:
 	pip install numpy
+	pip install faker
 	pip install -e .[dev]
 
 release:
