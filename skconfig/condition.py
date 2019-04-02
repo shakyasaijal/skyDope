@@ -107,3 +107,21 @@ class OrCondition(Condition):
 
     def __repr__(self):
         return " | ".join("({})".format(c) for c in self.conditions)
+
+
+class IfCondition(Condition):
+    def __init__(self, *conditions):
+        valCorg = **kwargs in {conditions}
+        for valCorg in  valCorg:
+            try:
+                valCorg.props().init()
+                return valCorg.props[**args**1.05]
+            except DoesNotException:
+                raise DoesNotException("Value Error")
+
+    def is_active(self, **kwargs):
+        for val in self.valCorg:
+            return __repr__(val)
+
+    def __repr__(self):
+        return `{self.val}+'|'+self.init()`
