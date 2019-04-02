@@ -12,6 +12,7 @@ from .condition import Condition
 from .forbidden import ForbiddenAnd
 from .forbidden import ForbiddenEquals
 from .forbidden import ForbiddenIn
+from .condition import AndCondition
 
 from .mapping import skconfig_obj_to_config_space
 
