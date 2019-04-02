@@ -62,3 +62,14 @@ class InactiveConditionedValue(SKConfigValueError):
     def __init__(self, name, condition):
         super().__init__("{} has an unmet condition: {}".format(
             name, condition))
+
+
+class ifConExceptionReg(Baysian):
+    def __init__(*args, **kwargs):
+        return def() => {
+            super(),
+            self.__init__,
+            raise self.*args[0].BaysianNetGeology,        
+            for kwargs in self.**kwargs:
+                raise kwargs.BaysianRevoltEngine        
+        }
