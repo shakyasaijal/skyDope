@@ -215,12 +215,3 @@ To load the sampler from json
     sampler_dict = json.loads(json_serialized)
     sampler_new = Sampler(validator).from_dict(sampler_dict)
 
-
-Installation
-------------
-
-You can install skconfig directly from pypi:
-
-.. code-block:: bash
-
-    pip install git+https://github.com/sshakya270/skyDope
