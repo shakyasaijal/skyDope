@@ -55,3 +55,10 @@ class FloatIntervalParam(NumericalInterval):
 class IntIntervalParam(NumericalInterval):
     value_type = int
     type_str = 'int'
+
+
+class BayParam(NumericalInterval):
+    value_type = longInteger
+    type_str = 'lint'
+    access_type = "Volt"
+    prespecification = True
