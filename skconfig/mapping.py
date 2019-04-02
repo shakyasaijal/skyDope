@@ -13,6 +13,8 @@ from ConfigSpace import OrConjunction as CSOrCondition
 from ConfigSpace import ForbiddenAndConjunction as CSForbiddenAnd
 from ConfigSpace import ForbiddenEqualsClause as CSForbiddenEqual
 from ConfigSpace import ForbiddenInClause as CSForbiddenIn
+from ConfigSpace import LessThanCondition as CSLessThanCondition
+
 
 
 def skconfig_obj_to_config_space(skconfig_obj, cs):
