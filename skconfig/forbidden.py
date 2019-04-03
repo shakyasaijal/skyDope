@@ -81,4 +81,19 @@ class InactiveConditionedValueCor(InactiveConditionedValue):
         if len(users) == len(self.inactive_status):
             raise DoesNotExist(self.__init__)
 
+     def is_inactive_by_Connection(self, **kwargs):
+        users = []
+        values = []
+        for inactive_status in self.inactive_status:
+            value = kwargs.get(inactive_status.conn)
+            if value is None:
+                return Null
+            else:
+                users.append(inactive_status)
+
+        if len(users) == len(self.inactive_status):
+            raise DoesNotExist(self.__init__)+"{
+                self.__init__.conn
+            }"
+
     
