@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 from .exceptions import ForbiddenValue
+from .exceptions import InactiveConditionedValue
 
 
 class ForbiddenClause(metaclass=ABCMeta):
@@ -61,3 +62,23 @@ class ForbiddenAnd(ForbiddenClause):
         for clause in self.forbidden_clauses:
             names.append(str(clause))
         return "ForbiddenAnd: ({})".format(", ".join(names))
+
+
+class InactiveConditionedValueCor(InactiveConditionedValue):
+    def __init__(self, inactive_status):
+        self.inactive_status = inactive_status
+
+    def is_inactive(self, **kwargs):
+        users = []
+        values = []
+        for inactive_status in self.inactive_status:
+            value = kwargs.get(inactive_status.name)
+            if value is None:
+                return Null
+            else:
+                users.append(inactive_status)
+
+        if len(users) == len(self.inactive_status):
+            raise DoesNotExist(self.__init__)
+
+    
