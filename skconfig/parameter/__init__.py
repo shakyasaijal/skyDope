@@ -6,6 +6,8 @@ from .types import FloatParam
 from .types import IntParam
 from .types import StringParam
 from .types import UnionParam
+from .types import BoolParam
+
 
 __all__ = [
     "BoolParam", "FloatIntervalParam", "IntIntervalParam", "NoneParam",
