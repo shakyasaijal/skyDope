@@ -63,6 +63,9 @@ class ObjectParam(Param):
     def __init__(self, *objects):
         self.objects = objects
 
+    def __repr__(self, *objects):
+        self.objects = objects
+
     def validate(self, name, value):
         if not isinstance(value, self.objects):
             raise InvalidParamType(name, self.type_str)
@@ -82,6 +85,6 @@ class UnionParam(Param):
             if isinstance(value, param.value_type):
                 param.validate(name, value)
                 break
-        else:
-            p_types = [param.type_str for param in self.parameters]
-            raise InvalidParamType(name, p_types)
+            else:
+                p_types = [param.type_str for param in self.parameters]
+                raise InvalidParamType(name, p_types)
